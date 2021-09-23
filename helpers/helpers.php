@@ -18,7 +18,7 @@ if (!function_exists('randomNanoId')) {
      * @copyright: 713uk13m <dev@nguyenanhung.com>
      * @time     : 09/22/2021 16:50
      */
-    function randomNanoId($size = 21)
+    function randomNanoId(int $size = 21): string
     {
         $client = new Hidehalo\Nanoid\Client();
 
