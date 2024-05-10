@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Project nanoid-helper
  * Created by PhpStorm
@@ -21,7 +22,24 @@ if (!function_exists('randomNanoId')) {
     function randomNanoId($size = 21)
     {
         $client = new Hidehalo\Nanoid\Client();
-
         return $client->generateId($size);
+    }
+}
+if (!function_exists('randomAlphabetId')) {
+    /**
+     * Function randomAlphabetId
+     *
+     * @param int $size
+     *
+     * @return string
+     * @author   : 713uk13m <dev@nguyenanhung.com>
+     * @copyright: 713uk13m <dev@nguyenanhung.com>
+     * @time     : 09/22/2021 16:50
+     */
+    function randomAlphabetId($size = 21)
+    {
+        $client = new Hidehalo\Nanoid\Client();
+        $alphabet = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        return $client->formatedId($alphabet, $size);
     }
 }
